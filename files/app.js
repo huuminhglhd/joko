@@ -48,12 +48,33 @@ function selectCardSize(buttonEl) {
   // Update card price display
   const price = buttonEl.getAttribute('data-price');
   const dishCard = buttonEl.closest('.dish-card');
-  if (dishCard && price) {
+  if (dishCard && price !== null) {
     const priceDisplay = dishCard.querySelector('.dish-price-display');
     if (priceDisplay) {
-      priceDisplay.textContent = formatCurrency(parseInt(price, 10));
+      const parsedPrice = parseInt(price, 10);
+      if (isNaN(parsedPrice) || parsedPrice <= 0) {
+        priceDisplay.textContent = 'Giá: Liên hệ';
+      } else {
+        priceDisplay.textContent = formatCurrency(parsedPrice);
+      }
     }
   }
+}
+
+function changeCardQty(buttonEl, delta, event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  const container = buttonEl ? buttonEl.closest('.card-qty-control') : null;
+  if (!container) return;
+  const valEl = container.querySelector('.card-qty-val');
+  if (!valEl) return;
+  let currentVal = parseInt(valEl.textContent || valEl.innerText || '1', 10);
+  if (isNaN(currentVal)) currentVal = 1;
+  currentVal += delta;
+  if (currentVal < 1) currentVal = 1;
+  valEl.textContent = currentVal;
 }
 
 function filterMenu(category) {
@@ -85,28 +106,40 @@ function addDishToCart(buttonEl, dishName) {
   if (!dishCard) return;
 
   const activeSizeBtn = dishCard.querySelector('.size-btn.active');
-  const size = activeSizeBtn ? activeSizeBtn.getAttribute('data-size') : 'Chuẩn';
-  const price = activeSizeBtn ? parseInt(activeSizeBtn.getAttribute('data-price'), 10) : 0;
+  const cardQtyValEl = dishCard.querySelector('.card-qty-val');
+
+  let size = 'Chuẩn';
+  let price = 0;
+  let quantityToAdd = 1;
+
+  if (cardQtyValEl) {
+    quantityToAdd = parseInt(cardQtyValEl.textContent, 10) || 1;
+    size = 'Giá: Liên hệ';
+    price = parseInt(cardQtyValEl.getAttribute('data-price') || '0', 10);
+  } else if (activeSizeBtn) {
+    size = activeSizeBtn.getAttribute('data-size') || 'Chuẩn';
+    price = parseInt(activeSizeBtn.getAttribute('data-price') || '0', 10);
+  }
 
   // Check if item already exists in cart with same size
   const existingIndex = cartState.findIndex(item => item.name === dishName && item.size === size);
 
   if (existingIndex > -1) {
-    cartState[existingIndex].qty += 1;
+    cartState[existingIndex].qty += quantityToAdd;
   } else {
     cartState.push({
       name: dishName,
       size: size,
       price: price,
-      qty: 1
+      qty: quantityToAdd
     });
   }
 
   updateCartUI();
-  showToast(`✅ Đã thêm ${dishName} (${size}) vào giỏ món!`);
+  showToast(`✅ Đã thêm ${quantityToAdd} x ${dishName} vào giỏ món!`);
 
   // Optional: Auto open cart modal on first item
-  if (cartState.reduce((sum, item) => sum + item.qty, 0) === 1) {
+  if (cartState.reduce((sum, item) => sum + item.qty, 0) === quantityToAdd) {
     toggleCartModal();
   }
 }
@@ -153,10 +186,11 @@ function updateCartUI() {
       cartState.forEach((item, index) => {
         const row = document.createElement('div');
         row.className = 'cart-item-row';
+        const priceLabel = item.price > 0 ? formatCurrency(item.price) : 'Giá: Liên hệ';
         row.innerHTML = `
           <div class="cart-item-info">
             <strong>${item.name}</strong>
-            <span>${item.size} — ${formatCurrency(item.price)}</span>
+            <span>${item.size} — ${priceLabel}</span>
           </div>
           <div class="cart-item-controls">
             <button class="qty-btn" onclick="changeItemQty(${index}, -1)">-</button>
@@ -206,9 +240,10 @@ function submitCartToZalo() {
   }
 
   // Format order items for Zalo text message
-  let itemsText = cartState.map((item, i) => 
-    `${i + 1}. ${item.name} (${item.size}) x${item.qty} = ${formatCurrency(item.price * item.qty)}`
-  ).join('\n');
+  let itemsText = cartState.map((item, i) => {
+    const itemPriceText = item.price > 0 ? formatCurrency(item.price * item.qty) : 'Giá: Liên hệ';
+    return `${i + 1}. ${item.name} (${item.size}) x${item.qty} = ${itemPriceText}`;
+  }).join('\n');
 
   const totalPrice = cartState.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
