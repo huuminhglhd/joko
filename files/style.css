@@ -52,6 +52,12 @@
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -63,9 +69,13 @@ body {
   background-color: var(--bg-cream);
   color: var(--text-dark);
   line-height: 1.6;
-  overflow-x: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
+}
+
+img, video, iframe, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Texture Grain Overlay */
@@ -1137,6 +1147,13 @@ h1, h2, h3, h4, .font-serif {
   color: var(--text-dark);
 }
 
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.2rem;
+}
+
 .financial-table {
   width: 100%;
   border-collapse: collapse;
@@ -1680,7 +1697,7 @@ h1, h2, h3, h4, .font-serif {
 .fab-zalo { color: #0084FF; }
 .fab-cart { color: var(--secondary-red-hover); }
 
-/* RESPONSIVE BREAKPOINTS */
+/* RESPONSIVE BREAKPOINTS & MOBILE FULL-SCREEN OPTIMIZATION */
 @media (max-width: 992px) {
   .hero-inner,
   .story-grid,
@@ -1703,7 +1720,7 @@ h1, h2, h3, h4, .font-serif {
 
   .desktop-nav,
   .hidden-mobile {
-    display: none;
+    display: none !important;
   }
 
   .mobile-menu-toggle {
@@ -1712,6 +1729,78 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top-announcement {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .announcement-content {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+  }
+
+  .announcement-content .divider {
+    display: none;
+  }
+
+  .header-inner {
+    padding: 0.75rem 1rem;
+  }
+
+  .hero-section {
+    padding: 2rem 0 3rem;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .hero-badge {
+    white-space: normal;
+    text-align: center;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.8rem;
+    max-width: 100%;
+    line-height: 1.3;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .steam-effect {
+    display: none !important;
+  }
+
   .guarantee-grid,
   .unboxing-grid,
   .franchise-pillars-grid,
@@ -1719,18 +1808,98 @@ h1, h2, h3, h4, .font-serif {
   .hero-trust-grid,
   .form-grid-2 {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
-  .hero-section {
-    padding: 3rem 0 4rem;
+  .media-card-wrap {
+    width: 100%;
+    aspect-ratio: 16/10;
+  }
+
+  .floating-dish-tag {
+    left: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .dish-tag-title {
+    font-size: 0.78rem;
+  }
+
+  .dish-tag-desc {
+    font-size: 0.7rem;
+  }
+
+  .floating-hotline-badge {
+    top: 0.6rem;
+    right: 0.6rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .floating-hotline-badge strong {
+    font-size: 0.8rem;
+  }
+
+  .menu-tabs {
+    gap: 0.4rem;
+  }
+
+  .tab-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  .form-card,
+  .contact-info-card {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cart-modal-container {
+    width: 95%;
+    max-width: 480px;
+    max-height: 85vh;
+    border-radius: var(--radius-md);
   }
 
   .mobile-sticky-bar {
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
   }
 
   body {
-    padding-bottom: 60px; /* Offset for mobile FAB */
+    padding-bottom: 70px; /* Offset for mobile FAB */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .brand-logo .logo-text {
+    font-size: 1.35rem;
+  }
+
+  .brand-logo .logo-sub {
+    font-size: 0.55rem;
+  }
+
+  .dish-details {
+    padding: 1.1rem;
+  }
+
+  .size-btn {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.6rem;
   }
 }
