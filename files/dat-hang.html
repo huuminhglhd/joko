@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đặt hàng — Joko</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<nav>
+  <div class="logo">JOKO<span>.</span></div>
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="menu.html">Thực đơn</a>
+    <a href="gioi-thieu.html">Giới thiệu</a>
+    <a href="dat-hang.html" class="active">Đặt hàng</a>
+    <a href="lien-he.html">Liên hệ</a>
+  </div>
+  <a class="nav-cta" href="lien-he.html">Đặt bàn</a>
+</nav>
+
+<section class="page-hero">
+  <div class="eyebrow">Đặt hàng</div>
+  <h1 class="display">Set mang về,<br>đóng kín để giữ nước glaze.</h1>
+  <p class="sub">Chọn set phù hợp với số người ăn, hoặc đặt qua app giao đồ ăn quen thuộc. Hộp đóng gói giữ nguyên vị đậm như tại quán.</p>
+</section>
+
+<section class="combo-section" style="border-top:none;">
+  <div class="combo-inner">
+    <div>
+      <div class="kicker">Kênh đặt hàng</div>
+      <h2 class="display">Đặt theo cách<br>tiện nhất cho bạn</h2>
+      <div class="channels">
+        <div class="channel"><span class="dot"></span>GrabFood</div>
+        <div class="channel"><span class="dot"></span>ShopeeFood</div>
+        <div class="channel"><span class="dot"></span>Đặt qua Zalo/Facebook</div>
+      </div>
+    </div>
+    <div class="combo-list">
+      <div class="combo-row">
+        <div><div class="name">Set 1 người</div><div class="desc">Jokbal signature + kim chi + rau ssam + cơm</div></div>
+        <div class="price">99.000đ</div>
+      </div>
+      <div class="combo-row">
+        <div><div class="name">Set 2–3 người</div><div class="desc">Jokbal signature (phần lớn) + naengchae + 2 phần cơm</div></div>
+        <div class="price">259.000đ</div>
+      </div>
+      <div class="combo-row">
+        <div><div class="name">Set tiệc nhỏ 4–5 người</div><div class="desc">Jokbal signature + sốt cay + naengchae + rau ssam đầy đủ</div></div>
+        <div class="price">449.000đ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="menu-head">
+    <div>
+      <div class="kicker">Đặt trực tiếp</div>
+      <h2 class="display">Điền thông tin đặt hàng</h2>
+    </div>
+  </div>
+  <div class="form-card" style="max-width:640px;">
+    <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn — Joko sẽ liên hệ xác nhận đơn qua số điện thoại vừa nhập.');">
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label for="name">Họ tên</label>
+          <input id="name" type="text" placeholder="Tên người nhận" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Số điện thoại</label>
+          <input id="phone" type="tel" placeholder="09xx xxx xxx" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="set">Chọn set</label>
+        <select id="set">
+          <option>Set 1 người — 99.000đ</option>
+          <option>Set 2–3 người — 259.000đ</option>
+          <option>Set tiệc nhỏ 4–5 người — 449.000đ</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="address">Địa chỉ giao hàng</label>
+        <textarea id="address" placeholder="Số nhà, đường, phường/xã..."></textarea>
+      </div>
+      <div class="form-row">
+        <label for="note">Ghi chú thêm</label>
+        <textarea id="note" placeholder="Ví dụ: ăn cay ít, giao sau 18h..."></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Gửi yêu cầu đặt hàng</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Joko — Chân giò hầm chuẩn vị Hàn</div>
+  <div>Hầm chậm. Đậm vị.</div>
+</footer>
+
+</body>
+</html>

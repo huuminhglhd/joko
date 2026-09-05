@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhượng Quyền F&B Tinh Gọn — JOKO | Cơ Hội Hợp Tác Khởi Nghiệp Chân Giò Hầm Hàn Quốc</title>
+
+  <!-- SEO & Social Open Graph Meta Tags -->
+  <meta name="description"
+    content="Nhượng quyền thương hiệu JOKO - Mô hình quán Chân Giò Hầm Hàn Quốc tinh gọn 15-25m², tập trung Delivery & Takeaway. Vốn đầu tư thấp, 1-2 nhân sự, lợi nhuận ròng 25-35%, bếp trung tâm sơ chế sẵn. Hotline/Zalo: 0962.869.295.">
+  <meta name="keywords"
+    content="nhượng quyền JOKO, nhượng quyền F&B, nhượng quyền chân giò hầm, khởi nghiệp F&B vốn thấp, nhượng quyền delivery, joko.mom">
+  <meta name="author" content="JOKO Korea F&B">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joko.mom/nhuong-quyen.html">
+  <meta property="og:title" content="Cơ Hội Hợp Tác Khởi Nghiệp F&B Cùng JOKO — Nhượng Quyền Tinh Gọn">
+  <meta property="og:description"
+    content="Mô hình quán Chân Giò Hầm Hàn Quốc chuyên Delivery & Takeaway. Vốn thấp, hoàn vốn nhanh 3-6 tháng, không lệ thuộc đầu bếp giỏi. Đăng ký nhận hồ sơ ngay!">
+  <meta property="og:image" content="images/jokbal-hero.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Texture Grain Overlay -->
+  <div class="grain"></div>
+
+  <!-- Announcement Bar -->
+  <div class="top-announcement">
+    <div class="announcement-content">
+      <span>🤝 CHƯƠNG TRÌNH HỢP TÁC NHƯỢNG QUYỀN THƯƠNG HIỆU F&B JOKO TOÀN QUỐC</span>
+      <span class="divider">•</span>
+      <span>☎️ HOTLINE / ZALO TƯ VẤN TRỰC TIẾP: <a href="tel:0962869295" class="phone-link">0962.869.295</a></span>
+    </div>
+  </div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="main-header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-text">JOKO<span class="amber-dot">.</span><span class="domain-tag">mom</span></div>
+        <div class="logo-sub">CHÂN GIÒ HẦM HÀN QUỐC</div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="index.html#menu" class="nav-link">Menu Đặt Món</a>
+        <a href="index.html#unboxing" class="nav-link">Trải Nghiệm Đóng Hộp</a>
+        <a href="nhuong-quyen.html" class="nav-link b2b-highlight active">Nhượng Quyền B2B</a>
+        <a href="index.html#story" class="nav-link">Về JOKO</a>
+        <a href="index.html#contact" class="nav-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="tel:0962869295" class="btn-phone-call hidden-mobile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          0962.869.295
+        </a>
+        <button class="cart-trigger-btn" id="open-cart-btn" onclick="toggleCartModal()">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-text">Giỏ Món</span>
+          <span class="cart-count-badge" id="cart-count">0</span>
+        </button>
+        <button class="mobile-menu-toggle" id="menu-toggle-btn" onclick="toggleMobileDrawer()"
+          aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <div class="logo-text">JOKO<span class="amber-dot">.</span>MOM</div>
+        </div>
+        <button class="drawer-close-btn" onclick="toggleMobileDrawer()">✕</button>
+      </div>
+      <div class="drawer-body">
+        <a href="index.html" onclick="toggleMobileDrawer()">🔥 Trang Chủ</a>
+        <a href="index.html#menu" onclick="toggleMobileDrawer()">🍗 Menu Đặt Món Delivery</a>
+        <a href="index.html#unboxing" onclick="toggleMobileDrawer()">📦 Trải Nghiệm Đóng Hộp</a>
+        <a href="nhuong-quyen.html" onclick="toggleMobileDrawer()" class="drawer-b2b">🤝 Nhượng Quyền B2B Tinh Gọn</a>
+        <a href="index.html#story" onclick="toggleMobileDrawer()">✨ Bí Quyết Hầm 3 Giờ</a>
+        <a href="index.html#contact" onclick="toggleMobileDrawer()">📍 Địa Chỉ & Hotline</a>
+
+        <div class="drawer-contact-box">
+          <p>Tư vấn nhượng quyền & hợp tác:</p>
+          <a href="tel:0962869295" class="btn btn-primary full-width">📞 Hotline: 0962.869.295</a>
+          <a href="https://zalo.me/0962869295" target="_blank" class="btn btn-secondary full-width margin-top-sm">💬
+            Chat Zalo Trực Tiếp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- FRANCHISE HERO SECTION -->
+    <section class="hero-section" style="padding: 4rem 0 5rem;">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>MÔ HÌNH KHỞI NGHIỆP F&B TINH GỌN</span>
+          </div>
+
+          <h1 class="hero-title">
+            Cơ Hội Hợp Tác<br>
+            <span class="gradient-text">Khởi Nghiệp F&B</span><br>
+            Cùng JOKO
+          </h1>
+
+          <p class="hero-subtitle">
+            Chân giò hầm Hàn Quốc chuẩn vị — Mô hình quán nhỏ 15–25m² chuyên giao tận nơi (Delivery & Takeaway). Vốn đầu tư thấp, vận hành 1–2 người, biên lợi nhuận ròng 25–35%, bếp trung tâm sơ chế 100%.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#franchise-form-box" class="btn btn-accent btn-lg btn-glow">
+              <span>📝 Đăng Ký Nhận Hồ Sơ Ngay</span>
+            </a>
+            <a href="tel:0962869295" class="btn btn-outline-light btn-lg">
+              <span>📞 Hotline B2B: 0962.869.295</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-grid">
+            <div class="trust-item">
+              <span class="trust-icon">💰</span>
+              <div class="trust-info">
+                <strong>Vốn Thấp</strong>
+                <span>Mặt bằng chỉ 15–25m²</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">👨‍🍳</span>
+              <div class="trust-info">
+                <strong>1-2 Nhân Sự</strong>
+                <span>Không lệ thuộc đầu bếp</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">📈</span>
+              <div class="trust-info">
+                <strong>Hoàn Vốn Nhanh</strong>
+                <span>Chỉ sau 3–6 tháng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="media-card-wrap">
+            <img src="images/55.jpg" alt="Mô hình quán Chân Giò Hầm JOKO tinh gọn" class="hero-img">
+            <div class="media-overlay"></div>
+
+            <div class="floating-dish-tag">
+              <div class="dish-tag-title">🤝 Đối Tác Tinh Gọn</div>
+              <div class="dish-tag-desc">Bếp Trung Tâm Cấp Nguyên Liệu 100%</div>
+            </div>
+
+            <div class="floating-hotline-badge">
+              <span>Tư Vấn Trực Tiếp Zalo</span>
+              <strong>0962.869.295</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: 4 THẾ MẠNH MÔ HÌNH NHƯỢNG QUYỀN JOKO -->
+    <section class="franchise-section" style="padding: 5rem 0;">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-kicker b2b-badge">ƯU THẾ VƯỢT TRỘI</div>
+          <h2 class="section-title">4 Thế Mạnh Cốt Lõi Mô Hình JOKO</h2>
+          <p class="section-desc">Được tối ưu để giải quyết triệt để các nỗi đau của nhà đầu tư F&B truyền thống: Chi phí mặt bằng đắt đỏ, lệ thuộc đầu bếp và khó quản lý nhân sự.</p>
+        </div>
+
+        <div class="franchise-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01</div>
+            <div class="pillar-icon">💰</div>
+            <h3>Vốn Đầu Tư Thấp</h3>
+            <p>Diện tích chỉ từ <strong>15–25m²</strong>. Tối ưu chi phí thuê mặt bằng cố định. Tổng chi phí setup ban đầu cực kỳ tinh gọn và an toàn vốn.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">02</div>
+            <div class="pillar-icon">👨‍🍳</div>
+            <h3>Vận Hành Tinh Gọn 1–2 Người</h3>
+            <p>Không lệ thuộc đầu bếp giỏi! Bếp trung tâm JOKO cung cấp 100% sốt cốt & nguyên liệu chân giò sơ chế sẵn chuẩn vị. Thao tác chỉ 3-5 phút/phần.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">03</div>
+            <div class="pillar-icon">📈</div>
+            <h3>Tỷ Suất Lợi Nhuận Cao</h3>
+            <p>Biên lợi nhuận ròng đạt <strong>25–35%</strong>. Vòng xoay dòng tiền nhanh, khả năng thu hồi vốn đầu tư nhanh chóng chỉ sau 3–6 tháng.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">04</div>
+            <div class="pillar-icon">🤝</div>
+            <h3>Hỗ Trợ Chuyển Giao A-Z</h3>
+            <p>Đào tạo quy trình, setup quầy bán chuẩn hóa, bàn giao chiến dịch marketing & đăng ký gian hàng ưu đãi trên GrabFood / ShopeeFood.</p>
+          </div>
+        </div>
+
+        <!-- Financial Projections Table & Form Row -->
+        <div class="franchise-row">
+          <div class="financial-box">
+            <h3>📊 Bảng Tính Toán Hiệu Quả Đầu Tư (Tham Khảo)</h3>
+            <div class="table-responsive">
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Chỉ Số Vận Hành</th>
+                    <th>Điểm Bán Tinh Gọn (15-25m²)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Doanh thu dự kiến / tháng</td>
+                    <td class="text-accent font-bold">120.000.000đ – 250.000.000đ</td>
+                  </tr>
+                  <tr>
+                    <td>Chi phí nguyên liệu (COGS)</td>
+                    <td>40% – 42%</td>
+                  </tr>
+                  <tr>
+                    <td>Mặt bằng & Điện nước</td>
+                    <td>8% – 12%</td>
+                  </tr>
+                  <tr>
+                    <td>Nhân sự (1-2 người/ca)</td>
+                    <td>10% – 12%</td>
+                  </tr>
+                  <tr>
+                    <td>Chi phí Marketing & App giao hàng</td>
+                    <td>10% – 12%</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td>Lợi Nhuận Ròng Dự Kiến</td>
+                    <td class="text-gold font-bold">28% – 35% (~35tr - 75tr/tháng)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="financial-note">
+              * Con số thực tế phụ thuộc vào vị trí địa lý, mật độ dân cư và năng lực quản lý cửa hàng.
+            </div>
+          </div>
+
+          <!-- Lead Capture Franchise Form -->
+          <div class="franchise-form-card" id="franchise-form-box">
+            <div class="form-card-header">
+              <h3>📝 Đăng Ký Nhận Hồ Sơ Nhượng Quyền</h3>
+              <p>Điền thông tin bên dưới để bộ phận phát triển thị trường JOKO liên hệ tư vấn trực tiếp trong 24h.</p>
+            </div>
+
+            <form id="franchiseForm" onsubmit="handleFranchiseSubmit(event)">
+              <div class="form-group">
+                <label for="f-name">Họ và tên *</label>
+                <input type="text" id="f-name" required placeholder="Ví dụ: Nguyễn Văn An">
+              </div>
+
+              <div class="form-group">
+                <label for="f-phone">Số điện thoại / Zalo *</label>
+                <input type="tel" id="f-phone" required placeholder="09xx xxx xxx">
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="f-region">Khu vực dự định mở *</label>
+                  <input type="text" id="f-region" required placeholder="Quận/Huyện, Tỉnh/TP">
+                </div>
+                <div class="form-group">
+                  <label for="f-capital">Vốn dự kiến đầu tư</label>
+                  <select id="f-capital">
+                    <option value="Dưới 100 triệu">Dưới 100 triệu</option>
+                    <option value="100 - 200 triệu" selected>100 – 200 triệu</option>
+                    <option value="200 - 300 triệu">200 – 300 triệu</option>
+                    <option value="Trên 300 triệu">Trên 300 triệu</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="f-note">Ghi chú thêm</label>
+                <textarea id="f-note" rows="3" placeholder="Yêu cầu cụ thể hoặc câu hỏi cho JOKO..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-accent full-width btn-glow">
+                <span>📩 Gửi Hồ Sơ Đăng Ký Tư Vấn</span>
+              </button>
+
+              <div class="form-direct-call">
+                Hoặc gọi trực tiếp Giám sát Nhượng quyền: <a href="tel:0962869295"><strong>0962.869.295</strong></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: QUY TRÌNH HỢP TÁC 5 BƯỚC -->
+    <section class="unboxing-section">
+      <div class="container">
+        <div class="section-header text-center light-text">
+          <div class="sub-kicker text-amber">LỘ TRÌNH KHỞI NGHIỆP</div>
+          <h2 class="section-title">Quy Trình Hợp Tác 5 Bước Cùng JOKO</h2>
+          <p class="section-desc">Chúng tôi đồng hành chặt chẽ cùng bạn từ khâu tư vấn ban đầu cho đến khi điểm bán vận hành trơn tru và sinh lời ổn định.</p>
+        </div>
+
+        <div class="unboxing-grid" style="grid-template-columns: repeat(5, 1fr);">
+          <div class="unboxing-step">
+            <div class="step-num">01</div>
+            <div class="step-icon">📋</div>
+            <h4>Đăng Ký & Tư Vấn</h4>
+            <p>Tiếp nhận nhu cầu, trao đổi thông tin chi tiết qua Hotline / Zalo 0962.869.295.</p>
+          </div>
+          <div class="unboxing-step">
+            <div class="step-num">02</div>
+            <div class="step-icon">🗺️</div>
+            <h4>Khảo Sát Mặt Bằng</h4>
+            <p>Đánh giá mật độ dân cư, bán kính giao hàng và tiềm năng doanh thu khu vực.</p>
+          </div>
+          <div class="unboxing-step">
+            <div class="step-num">03</div>
+            <div class="step-icon">🖊️</div>
+            <h4>Ký Hợp Đồng</h4>
+            <p>Thống nhất phương án hợp tác, bàn giao quy trình thiết kế & danh mục thiết bị.</p>
+          </div>
+          <div class="unboxing-step">
+            <div class="step-num">04</div>
+            <div class="step-icon">🏗️</div>
+            <h4>Setup & Đào Tạo</h4>
+            <p>Thi công quầy kệ, đào tạo quy trình đóng gói, ra món & đăng ký các app giao hàng.</p>
+          </div>
+          <div class="unboxing-step">
+            <div class="step-num">05</div>
+            <div class="step-icon">🎉</div>
+            <h4>Khai Trương</h4>
+            <p>Đẩy mạnh marketing bảo trợ truyền thông ban đầu & đồng hành vận hành lâu dài.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <div class="footer-col brand-col">
+        <div class="brand-logo">
+          <div class="logo-text">JOKO<span class="amber-dot">.</span>MOM</div>
+          <div class="logo-sub">CHÂN GIÒ HẦM HÀN QUỐC</div>
+        </div>
+        <p class="footer-desc">
+          Chân giò hầm Hàn Quốc tinh gọn, tập trung giao hàng tận nơi (Delivery & Takeaway) và chuyển giao mô hình Nhượng Quyền F&B toàn quốc.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên Kết Nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#menu">Thực Đơn Delivery</a></li>
+          <li><a href="index.html#unboxing">Trải Nghiệm Đóng Hộp</a></li>
+          <li><a href="nhuong-quyen.html">Dành Cho Nhà Đầu Tư (B2B)</a></li>
+          <li><a href="index.html#story">Bí Quyết Hầm Thảo Mộc</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hỗ Trợ B2B Nhượng Quyền</h4>
+        <div class="app-badges">
+          <span class="app-tag">Hotline: 0962.869.295</span>
+          <span class="app-tag">Zalo Tư Vấn 24/7</span>
+          <span class="app-tag">Website: joko.mom</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>© 2026 JOKO (joko.mom) — Chân Giò Hầm Hàn Quốc. Hotline / Zalo: 0962.869.295</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING MINI-CART MODAL -->
+  <div class="cart-modal-backdrop" id="cart-modal">
+    <div class="cart-modal-container">
+      <div class="cart-modal-header">
+        <h3>🛒 Giỏ Món Đặt Hàng JOKO</h3>
+        <button class="cart-close-btn" onclick="toggleCartModal()">✕</button>
+      </div>
+
+      <div class="cart-modal-body">
+        <div id="cart-items-container" class="cart-items-list"></div>
+
+        <div id="cart-empty-msg" class="cart-empty-box">
+          <span>🍽️</span>
+          <p>Giỏ hàng của bạn đang trống.</p>
+          <a href="index.html#menu" class="btn btn-primary btn-sm" onclick="toggleCartModal()">Xem thực đơn</a>
+        </div>
+
+        <div class="cart-summary-box" id="cart-summary-box">
+          <div class="cart-summary-line">
+            <span>Tổng cộng món:</span>
+            <strong id="cart-total-price" class="text-accent">0đ</strong>
+          </div>
+
+          <div class="checkout-form-fields">
+            <h4>Thông Tin Nhận Hàng Nhanh:</h4>
+            <div class="form-group">
+              <input type="text" id="c-name" placeholder="Họ và tên người nhận *" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="c-phone" placeholder="Số điện thoại nhận hàng *" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="c-address" placeholder="Địa chỉ giao hàng chi tiết *" required>
+            </div>
+            <div class="form-group">
+              <textarea id="c-note" rows="2" placeholder="Ghi chú thêm (Ăn cay ít, giao sau 18h...)"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-modal-footer" id="cart-modal-footer">
+        <button class="btn btn-accent full-width btn-glow" onclick="submitCartToZalo()">
+          <span>💬 CHỐT ĐƠN QUA ZALO (0962.869.295)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY MOBILE FLOATING ACTION BAR (FAB) -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:0962869295" class="fab-btn fab-call">
+      <span class="fab-icon">📞</span>
+      <span>Gọi Ngay</span>
+    </a>
+    <a href="https://zalo.me/0962869295" target="_blank" class="fab-btn fab-zalo">
+      <span class="fab-icon">💬</span>
+      <span>Chat Zalo</span>
+    </a>
+    <button onclick="toggleCartModal()" class="fab-btn fab-cart">
+      <span class="fab-icon">🛒</span>
+      <span>Giỏ Món (<span id="fab-cart-count">0</span>)</span>
+    </button>
+  </div>
+
+  <!-- JavaScript App Engine -->
+  <script src="app.js"></script>
+</body>
+
+</html>

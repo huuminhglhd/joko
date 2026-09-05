@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ — Joko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="grain"></div>
+
+  <nav>
+    <div class="logo">JOKO<span>.</span>MOM</div>
+    <div class="nav-links">
+      <a href="index.html">Trang chủ</a>
+      <a href="menu.html">Thực đơn</a>
+      <a href="gioi-thieu.html">Giới thiệu</a>
+      <a href="dat-hang.html">Đặt hàng</a>
+      <a href="lien-he.html" class="active">Liên hệ</a>
+    </div>
+    <a class="nav-cta" href="lien-he.html">Đặt bàn</a>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="eyebrow">Liên hệ</div>
+        <h1 class="display">Ghé Joko,<br>hoặc nhắn trước để giữ bàn.</h1>
+        <p class="sub">Với nhóm từ 4 người trở lên, nên đặt bàn trước ít nhất 30 phút để quán chuẩn bị kịp.</p>
+      </div>
+      <div class="hero-visual">
+        <img src="images/chao.png" alt="Hân Hạnh Được Phục Vụ Quý Khách">
+        <div class="cap">JOKO.MOM</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit">
+    <div>
+      <h2 class="display">Thông tin quán</h2>
+      <div class="info-row">
+        <div class="k">Địa chỉ</div>
+        <div class="v">Số 41 Đỗ Quang - Khu Đồng Mơ - Xã Gia Lộc - Thành Phố Hải Phòng</div>
+      </div>
+      <div class="info-row">
+        <div class="k">Giờ mở</div>
+        <div class="v">10:00 – 21:30, tất cả các ngày trong tuần</div>
+      </div>
+      <div class="info-row">
+        <div class="k">Đặt bàn</div>
+        <div class="v">Gọi hoặc nhắn Zalo trước 30 phút cho nhóm từ 4 người</div>
+      </div>
+      <div class="info-row">
+        <div class="k">Liên hệ</div>
+        <div class="v">Số điện thoại / Zalo OA của Joko : 0973067282
+        </div>
+      </div>
+      <div class="hero-actions" style="margin-top:2rem;">
+        <a class="btn btn-primary" href="#">Nhắn Zalo đặt bàn</a>
+        <a class="btn btn-ghost" href="dat-hang.html">Đặt món mang về</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.006935272635!2d106.29323417531773!3d20.87511539864239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31359a7efc59d173%3A0x8fd9d7b9201c872a!2zNDEgxJDhu5cgUXVhbmcsIEdpYSBM4buZYywgSM6jaSBQaMOybmcsIFZpZXRuYW0!5e0!3m2!1svi!2svn!4v1710000000000!5m2!1svi!2svn"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="menu-section" style="padding-top:0;">
+    <div class="menu-head">
+      <div>
+        <div class="kicker">Gửi lời nhắn</div>
+        <h2 class="display">Hỏi trước khi ghé quán</h2>
+      </div>
+    </div>
+    <div class="form-card" style="max-width:640px;">
+      <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn — Joko sẽ phản hồi sớm nhất.');">
+        <div class="form-grid-2">
+          <div class="form-row">
+            <label for="cname">Họ tên</label>
+            <input id="cname" type="text" placeholder="Tên của bạn" required>
+          </div>
+          <div class="form-row">
+            <label for="cphone">Số điện thoại</label>
+            <input id="cphone" type="tel" placeholder="09xx xxx xxx" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="cmsg">Nội dung</label>
+          <textarea id="cmsg" placeholder="Ví dụ: đặt bàn 6 người lúc 19h thứ Bảy..."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Gửi lời nhắn</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 Joko — Chân giò hầm chuẩn vị Hàn</div>
+    <div>Hầm chậm. Đậm vị.</div>
+  </footer>
+
+</body>
+
+</html>
